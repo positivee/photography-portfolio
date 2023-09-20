@@ -54,7 +54,7 @@ export default async function Home() {
               </p>
             </div>
           </div>
-          {/* <Gallery images={images} slug={"photo"} /> */}
+          <Gallery images={images} slug={"photo"} />
           <PackageOfferSection />
         </div>
       </main>
