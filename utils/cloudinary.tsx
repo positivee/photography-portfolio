@@ -7,13 +7,20 @@ cloudinary.v2.config({
   secure: true,
 });
 
-export async function getFolders() {
+export async function getFolders(): Promise<
+  {
+    name: string;
+    path: string;
+  }[]
+> {
   const results = await cloudinary.v2.api.sub_folders(
     `${process.env.CLOUDINARY_PHOTOSHOOTS_FOLDER}`,
     {
       max_results: 50,
     }
   );
+
+  console.log(results.folders);
 
   return results.folders;
 }

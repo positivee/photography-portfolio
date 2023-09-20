@@ -14,7 +14,7 @@ const menuLinks = [
   { title: " Client panel", url: "/client-panel" },
 ];
 
-function Navbar({ session }: { session: Session }) {
+function Navbar({ session }: { session: Session | null }) {
   const [openNav, setOpenNav] = useState(false);
   let menuRef = useRef<HTMLDivElement>(null);
 

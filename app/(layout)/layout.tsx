@@ -1,4 +1,4 @@
-import { getServerSession } from "next-auth";
+import { Session, getServerSession } from "next-auth";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { authOptions } from "../api/auth/[...nextauth]/route";
